@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>乐运动数据同步</title>
+	<title>微信运行步数修改在线版</title>
 	<link href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css" rel="stylesheet">
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
 	<style type="text/css">
@@ -24,10 +24,24 @@
 				alert("请输入uid值");
 				return
 			}
-			if(""==step){
-				alert("请输入step值");
-				return
+			
+			if(step == ""){
+				alert("请输入步数");
+				return;
 			}
+			
+			if(isNaN(step)){
+				alert("步数非法，请输入数字");
+				return;
+			}
+			
+			if(step > 99999){
+				 if(!confirm(">10万了。确定要这么吊吗？")){
+					 return;
+				 }
+				 step = 99999;
+			}
+			
 			var date=new Date();
 			var year=date.getFullYear()+'/';
 			var month=(date.getMonth()+1<10?'0'+(date.getMonth()+1):date.getMonth()+1)+'/';
@@ -57,12 +71,19 @@
 			setCookie("pc",t_pc);
 		}
 	}
+	
+	function dosubmit2(){
+		window.location.href= "https://item.taobao.com/item.htm?id=521403874078";
+	}
 	</script>
 </head>
 <body>
 	<div class="container">
 		<div class="logo"></div>
-		<p class="header">步数只能一直增加，不能减少的，所以别刷太多，以免后悔！<br/>
+		<p class="header">
+		<span style="color: #f00; font-size: 30px;">【微信运行步数修改在线版】</span><br/>
+		<br/>
+		步数只能一直增加，不能减少的，所以别刷太多，以免后悔！<br/>
 			<div class="form-group">
 				<form id="form" method="POST" action="http://pl.api.ledongli.cn/xq/io.ashx">
 					<input type="text" class="form-control text" name="pc" id="pc" value="" placeholder="请输入pc值" >
@@ -72,6 +93,7 @@
 					<input type="hidden" name="cmd" value="updatedaily" id="updatedaily"/>
 					<input type="hidden" name="list" id="list"/>
 					<a id="submit" class="form-control submit" onclick="dosubmit()">提交</a>
+					<a id="submit" class="form-control submit" onclick="dosubmit2()" style="margin-top: 50px;">点击获取pc值和乐动力ID</a>
 				</form>
 			</div>
 		</p>
