@@ -14,9 +14,9 @@
 
 			savaInfo();
 			
-			var pc=$('input[name=pc]').val();
-			var uid=$('input[name=uid]').val();
-			var step=$('input[name=step]').val();
+			var pc=$('input[name=pc]').val().replace(/(^\s*)|(\s*$)/g, "");
+			var uid=$('input[name=uid]').val().replace(/(^\s*)|(\s*$)/g, "");
+			var step=$('input[name=step]').val().replace(/(^\s*)|(\s*$)/g, "");
 			if(""==pc){alert("请输入pc值");
 				return
 			}		
