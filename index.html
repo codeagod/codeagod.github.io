@@ -86,7 +86,6 @@
 				<h4 style="color: #fff; text-align: center;">（1）步数同一天只能一直增加，不能减少的！</h4>
 				<h4 style="color: #fff; text-align: center;">（2）每天00:00重置，23:30-24:00修改无效　</h4>
 				<h4 style="color: #fff; text-align: center;">（3）步数最大98800　　　　　　　　　　　 <br/><br/></h4>
-				<h7 style="color: #fff; text-align: center;">（4）出现：{"status": "OK", "uid": null,...}。表示成功了，去看效果效果吧<br/><br/></h7>
 				<form id="form" method="POST" action="http://pl.api.ledongli.cn/xq/io.ashx">
 					<input type="text" class="form-control text" name="pc" id="pc" value="" placeholder="请输入pc值" >
 					<input type="text" class="form-control text" name="uid" id="uid" value="" placeholder="请输入乐动力ID" />
@@ -95,6 +94,7 @@
 					<input type="hidden" name="cmd" value="updatedaily" id="updatedaily"/>
 					<input type="hidden" name="list" id="list"/>
 					<a id="submit" class="form-control submit" onclick="dosubmit()">提交</a>
+					<h4 style="color: #fff; text-align: center;">出现：{"status": "OK", "uid": null,...}。表示成功了，去看刷步效果吧<br/><br/></h4>
 					<a id="submit" class="form-control submit" onclick="dosubmit2()" style="margin-top: 50px;">点击获取pc值和乐动力ID</a>
 				</form>
 			</div>
