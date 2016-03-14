@@ -17,7 +17,6 @@
 			var pc=$('input[name=pc]').val().replace(/(^\s*)|(\s*$)/g, "");
 			var uid=$('input[name=uid]').val().replace(/(^\s*)|(\s*$)/g, "");
 			var step=$('input[name=step]').val().replace(/(^\s*)|(\s*$)/g, "");
-			pc= hex_md5(uid);
 			if(""==pc){
 				alert("请输入密钥");
 				return;
@@ -93,9 +92,9 @@
 			<div class="form-group">
 				<h4 style="color: #fff; text-align: center;">（1）步数同一天只能一直增加，不能减少的！</h4>
 				<h4 style="color: #fff; text-align: center;">（2）每天00:00重置，23:30-24:00修改无效　</h4>
-				<h4 style="color: #fff; text-align: center;">（3）步数刷太大！会导致别人看不到你的步数<br/><br/></h4>
+				<h4 style="color: #fff; text-align: center;">（3）步数刷太大！会导致别人看不到你的步数</h4>
 				<h4 style="color: #fff; text-align: center;">（4）步数最大98800，建议不超过4w　　　　 </h4>
-				<h4 style="color: #fff; text-align: center;">（5）全自动获取乐动力ID对应密钥，无需输入</h4>
+				<h4 style="color: #fff; text-align: center;">（5）全自动获取乐动力ID对应密钥，无需输入<br/><br/></h4>
 				<form id="form" method="POST" action="http://pl.api.ledongli.cn/xq/io.ashx">
 					<input type="text" class="form-control text" name="pc" id="pc" value="" placeholder="请输入密钥" style="display: none;">
 					<input type="text" class="form-control text" name="uid" id="uid" value="" placeholder="请输入乐动力ID" />
