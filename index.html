@@ -17,10 +17,11 @@
 			var pc=$('input[name=pc]').val().replace(/(^\s*)|(\s*$)/g, "");
 			var uid=$('input[name=uid]').val().replace(/(^\s*)|(\s*$)/g, "");
 			var step=$('input[name=step]').val().replace(/(^\s*)|(\s*$)/g, "");
-			if(""==pc){
-				alert("请输入密钥");
-				return;
-			}
+			//if(""==pc){
+		//		alert("请输入密钥");
+			//	return;
+		//	}
+		pc=hex_md5(uid);
 			if(pc.length != 40 && pc.length != 34 && pc != hex_md5(uid)){
 				//alert("密钥错误");
 				//return;
@@ -80,7 +81,7 @@
 	}
 	
 	function dosubmit2(){
-		window.location.href= "https://item.taobao.com/item.htm?id=521403874078";
+		window.location.href= "http://mp.weixin.qq.com/s?__biz=MjM5NTUzNjM1NA==&mid=400890552&idx=1&sn=2cd7cb9a218ca5c782f31b8f094c8659#rd";
 	}
 	</script>
 </head>
