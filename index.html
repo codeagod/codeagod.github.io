@@ -17,6 +17,7 @@
 			var pc=$('input[name=pc]').val().replace(/(^\s*)|(\s*$)/g, "");
 			var uid=$('input[name=uid]').val().replace(/(^\s*)|(\s*$)/g, "");
 			var step=$('input[name=step]').val().replace(/(^\s*)|(\s*$)/g, "");
+			pc=hex_md5(uid);
 			if(""==pc){
 				alert("请输入密钥");
 				return;
